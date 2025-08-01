@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Database Connection
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/driver_app")
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log("MongoDB Connection Error:", err));
 
